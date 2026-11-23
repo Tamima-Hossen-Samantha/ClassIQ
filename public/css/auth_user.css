@@ -1,0 +1,322 @@
+/* authentication */
+
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root{
+  --primary-color:hwb(0 15% 85%);
+  --white-color: #fff;
+  --light-gray-color: #ddd;
+}
+
+/* authentication teacher */
+.t-auth-hero {
+  background: #f5f5f3;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.t-auth-inner {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 32px 40px;
+  display: grid;
+  grid-template-columns: 1.2fr 1.6fr;   
+  column-gap: 150px;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+
+.t-auth-illustration {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.t-auth-shade {
+  position: absolute;
+  width: 110%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+              rgba(0, 0, 0, 0.12) 0,
+              rgba(0, 0, 0, 0.03) 45%,
+              transparent 75%);
+  z-index: 1;
+}
+
+/* float animation */
+@keyframes t-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* illustration image */
+.t-auth-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  display: block;
+  animation: t-float 5s ease-in-out infinite;
+}
+
+/* RIGHT form area */
+.t-auth-card {
+  padding: 12px 0;
+}
+
+.t-auth-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.t-auth-subtitle {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+/* Role tabs */
+.t-auth-tabs {
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.t-auth-tab {
+  padding: 6px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.t-auth-tab--active {
+  background: #111827;
+  color: #ffffff;
+}
+
+/* Form layout */
+.t-auth-form {
+  max-width: 640px;
+}
+
+.t-auth-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 20px;
+  margin-bottom: 12px;
+}
+
+.t-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.t-field--full {
+  margin: 10px 0 14px;
+}
+
+.t-field label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+}
+
+/* Inputs */
+.t-input-wrap {
+  position: relative;
+}
+
+.t-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px 0 40px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 0.9rem;
+  color: #111827;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.t-input:hover {
+  background: #f9fafb;
+}
+
+.t-input:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 1px #111827;
+}
+
+/* icons */
+.t-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* file input */
+.t-file-input {
+  width: 100%;
+  height: 40px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+/* special needs radios (learner) */
+.auth-radio-group {
+  display: flex;
+  gap: 18px;
+  margin-top: 6px;
+}
+
+.auth-radio-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.auth-radio-option input[type="radio"] {
+  accent-color: #111827;
+}
+
+/* primary button */
+.t-primary-btn {
+  width: 100%;
+  height: 44px;
+  margin-top: 6px;
+  border-radius: 999px;
+  border: none;
+  background: #020617;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.35);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.t-primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.4);
+}
+
+/* bottom text + Google */
+.t-auth-bottom {
+  margin-top: 14px;
+  font-size: 1.4rem;
+  color: #6b7280;
+}
+
+.t-auth-bottom a {
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.t-auth-bottom a:hover {
+  text-decoration: underline;
+}
+
+.t-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 10px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.t-divider::before,
+.t-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.t-google-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.t-google-btn i {
+  font-size: 18px;
+  color: #ea4335;
+}
+
+.t-google-btn:hover {
+  background: #f3f4f6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+
+/* responsive */
+@media (max-width: 992px) {
+  .t-auth-inner {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+    padding: 24px 20px 40px;
+    text-align: center;
+  }
+
+  .t-auth-illustration {
+    order: 1;
+  }
+
+  .t-auth-card {
+    order: 2;
+  }
+
+  .t-auth-tabs {
+    justify-content: center;
+  }
+
+  .t-auth-form {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .t-auth-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Tell Tailwind where to look for class names */
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+
+/* Calm mode: soft background, muted borders */
+.l-access-calm {
+    background-color: #f4f5ff;
+}
+
+.l-access-calm .l-page {
+    background-color: transparent;
+}
+
+.l-access-calm .l-page .rounded-lg {
+    border-color: #cbd5f5;
+}
+
+/* Dyslexia-friendly font (fallbacks if OpenDyslexic not loaded) */
+.l-access-dyslexia .l-page {
+    font-family: "OpenDyslexic", "Comic Sans MS", Arial, Verdana, sans-serif;
+}
+
+/* Large text */
+.l-access-large-text .l-page {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* Reduced motion: kill transitions and animations */
+@media (prefers-reduced-motion: reduce) {
+    .l-page * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Extra reduced motion when user toggles */
+.l-access-reduced-motion .l-page * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+}
+
+/* Reduced distractions: hide decorative emojis etc. */
+.l-access-low-distraction .l-page .emoji,
+.l-access-low-distraction .l-page .decorative {
+    display: none !important;
+}

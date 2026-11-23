@@ -296,7 +296,9 @@ Future Implementation:
 
 ## License
 
+This project is released under the MIT License — see the [LICENSE](LICENSE) file for the full text.
 
+You are free to use, copy, modify, and distribute the firmware, including for commercial purposes, as long as the original copyright notice is kept. The software is provided "as is" without warranty.
 
 ---
 
@@ -304,6 +306,6 @@ Future Implementation:
 
 **Built with ☕, late nights, and a lot of Composer errors.**
 
-[Report an issue](https://github.com/Samantha-panda/ClassIQ/issues) · [Request a feature](https://github.com/Samantha-panda/ClassIQ/issues/new)
+[Report an issue](https://github.com/Tamima-Hossen-Samantha/ClassIQ/issues) · [Request a feature](https://github.com/Tamima-Hossen-Samantha/ClassIQ/issues/new)
 
 </div>
